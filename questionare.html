@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="./asset/questionare.css">
+</head>
+<body>
+    <header>
+        <div class="flex">
+            <div class="header-left">
+                <h3>My Okinawa BLOG</h3>
+            </div>
+            <div class="header-right">
+                <div>
+                    <a href="tel:+08064635798" class="call"><i class="fa-solid fa-phone phone"></i></a>
+                </div>
+                <div class="menu-container">
+                    <nav class="navbar">
+                        <div class="menu-toggle" id="mobile-menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <ul class="nav-list">
+                            <li class="list"><a href="/index.html" class="nav">ホーム</a></li>
+                            <li class="list"><a href="#tourist" class="nav">観光地</a></li>
+                            <li class="list"><a href="/gourment.html" class="nav">ご当地グルメ</a></li>
+                            <li class="list"><a href="/hotel.html" class="nav">宿泊所</a></li>
+                            <li class="list"><a href="/message.html" class="nav">メッセージ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="tag">
+        アンケート
+    </div>
+    <main>
+        <small>ホーム > アンケート</small>
+
+        
+        
+
+        <form action="process.php" method="post">
+            <h5>
+                こちらのサイトを拝見いただき、誠にありがとうございます。<br>
+                こちらのページに関しましては簡単な観光アンケートですので、深く考えずにお答えください。【所要時間5分】
+            </h5>
+
+            <p class="questionare">
+                <span class="question">Q1.年齢を教えてください</span>
+                <br>
+                <br>
+                <br>
+                <select name="age" class="answer" required>
+                    <option value="choose">選択してください</option>
+                    <option value="less_10">10歳未満</option>
+                    <option value="teen">10〜20歳</option>
+                    <option value="twenties">20〜30歳</option>
+                    <option value="thirties">30〜40歳</option>
+                    <option value="fourties">40〜50歳</option>
+                    <option value="fifties">50〜60歳</option>
+                    <option value="sixties">60歳以上</option>
+                </select>
+            </p>
+            <p class="questionare">
+                <span class="question">Q2.性別を教えてください</span>
+                <br>
+                <br>
+                <br>
+                <label for="man">
+                    <input type="radio" name="gender" value="man" id="man" class="answer">男性</label>
+                <br>
+                <br>
+                <label for="woman"><input type="radio" name="gender" value="woman" id="woman" class="answer">女性</label>
+            </p>
+            <p class="questionare">
+                <span class="question">Q3.このサイトはご満足いただけましたか？</span>
+                <br>
+                <br>
+                <br>
+                <label for="yes" class="answer"><input type="radio" name="satisfaction" value="yes" id="yes">はい</label>
+                <br>
+                <br>
+                <label for="no" class="answer"><input type="radio" name="come" value="no" id="no">いいえ</label>
+            </p>
+            <p class="questionare">
+                <span class="question">Q4.ウェブサイトの内容・コンテンツをどのように感じましたか。</span>
+                <br>
+                <br>
+                <br>
+                <div>
+                    <label for="best">
+                        <input type="radio" name="evacuation" value="best" id="best" class="answer">
+                        良かった
+                    </label>
+                    <label for="good">
+                        <input type="radio" name="evacuation" value="good" id="good" class="answer">
+                        やや良かった
+                    </label>
+                    <label for="soso">
+                        <input type="radio" name="evacuation" value="soso" id="soso" class="answer">
+                        どちらとも言えない
+                    </label>
+                    <label for="bad">
+                        <input type="radio" name="evacuation" value="bad" id="bad" class="answer">
+                        やや悪かった
+                    </label>
+                    <label for="worst">
+                        <input type="radio" name="evacuation" value="worst" id="worst" class="answer">
+                        悪かった
+                    </label>
+                </div>
+            </p>
+            <p class="questionare">
+                <span class="question">Q5.沖縄旅行の目的を教えてください</span>
+                <br>
+                <br>
+                <br>
+                <div class="answer">
+                    <label for="hotel">
+                        <input type="radio" name="purpose" value="hotel" id="hotel" class="answer">
+                        ホテルを楽しみたい
+                    </label>
+                    <br>
+                    <br>
+                    <label for="food">
+                        <input type="radio" name="purpose" value="food" id="food" class="answer">
+                        ご当地グルメを楽しみたい
+                    </label>
+                    <br>
+                    <br>
+                    <label for="sightseeing">
+                        <input type="radio" name="purpose" value="sightseeing" id="sightseeing" class="answer">
+                        観光地を巡りたい
+                    </label>
+                    <br>
+                    <br>
+                    <label for="other">
+                        <input type="radio" name="purpose" value="other" class="answer" id="otherRadiobox">
+                        その他<input type="text" name="more" class="more" id="more" disabled>
+                    </label>
+                </div>
+            </p>
+            <p class="questionare">
+                <span class="question">Q6.沖縄のいいところは何だと思いますか？（複数回答可）</span><br>
+                <br>
+                <br>
+                <div class="answer">
+                    <label for="warm">
+                        <input type="checkbox" name="good" value="relax" class="answer" id="warm">
+                        環境が暖かくて適している 
+                    </label>
+                    <br>
+                    <br>
+                    <label for="culture">
+                        <input type="checkbox" name="good" value="culture" class="answer" id="culture">
+                        文化に興味がある
+                    </label>
+                    <br>
+                    <br>
+                    <label for="delicious">
+                        <input type="checkbox" name="good" value="delicious" class="answer" id="delicous">
+                        沖縄料理が美味しい 
+                    </label>
+                    <br>
+                    <br>
+                    <label for="talkative"> 
+                        <input type="checkbox" name="good" value="talk" class="answer" id="talkative">
+                        現地の人と話しやすい
+                    </label>
+                    <br>
+                    <br>
+                    <label for=""> 
+                        <input type="checkbox" name="good" value="other" class="answer" id="otherCheckbox">
+                        その他<input type="text" name="more" class="more" id="moreInput" disabled>
+                    </label>
+                </div>
+            </p>
+            <p class="questionare">
+                <label for="expression" class="question">Q7.沖縄を一言で表すなら？</label>
+                <br>
+                <br>
+                <br>
+                <input type="text" name="express" placeholder="" id="expression" class="answer phrase">
+            </p>
+            <p class="questionare">
+                <label for="message" class="question">※沖縄に来られた方、これから行きたいと思う方、沖縄に対するご意見をなんでもお聞かせください<br>いただいた情報を元にこれからもこちらのページを更新していきます！</label>
+                <br>
+                <br>
+                <br>
+                <textarea name="message" id="message" class="answer"></textarea>
+            </p>
+            <p class="submit">
+                <button data-hover="送信完了" type="submit" value="Submit" class="zoom"><div>送信</div></button>
+            </p>
+            <p class="Thankyou">Hope you will enjoy here in Okinawa someday!!</p>
+        </form>
+
+    </main>
+    <div class="raindrop" id="wrapper">
+        <br><br><br><br>
+    </div>
+    <footer>
+        <a href="#" class="pagetop scroll" id="top">
+            <i class="fa-solid fa-chevron-up go-top" style="color: black;"></i>
+        </a>
+        <div class="footer-lane">
+            <div class="footer-box">
+                <a href="./pictures.html" class="anchor-below"><i class="fa-solid fa-camera"></i>&nbsp; Memory Photo</a>
+                <a href="#questionare" class="anchor-below">アンケート</a>
+            </div>
+            <div class="copyright">&copy; 2024 Yuyas Okinawa Page</div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/js/raindrops.js"></script>
+    <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/js/5-16.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/questionare.js"></script>
+</body>
+</html>
