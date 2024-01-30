@@ -1,0 +1,382 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* width: 100%;
+    height: 100%; */
+    background-color: rgb(255, 255, 255);
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    display: block;
+    width: 100%;
+    z-index: 2;
+}
+
+.flex{
+    border-right: 2px solid rgb(118, 118, 118);
+    /* border-bottom: 2px solid rgb(118, 118, 118); */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(80, 199, 255, 0.9), rgba(255, 255, 255, 0.9) 80%);
+    z-index: 2;
+}
+
+
+.header-left{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+h3{
+    font-size: 35px;
+    margin: -40px 0;
+}
+
+.symbol{
+    height: 70px;
+    width: 70px;
+    border-radius: 80%;
+    margin-right: 10px;
+}
+
+.header-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.call{
+    color: #3a3a3a;
+}
+
+.phone{
+    transition: 0.2s transform ease;
+}
+
+.phone:hover{
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+.phone:active{
+    transform: translateY(3px);
+}
+
+.nav-list{
+    margin-right: 50px;
+    padding-right: 40px;
+    display: flex;
+    gap: 28px;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.nav{
+    font-size: 20px;
+    color: #3a3a3a;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transform: translateX(-100%, 0%);
+    background-color: #3a3a3a;
+    /* transform: translate(0, 0); */
+    transition: width cubic-bezier(0.215, 0.610, 0.355, 1)0.3s;
+    content: "";
+}
+
+.nav:hover:after{
+    width: 100%;
+}
+/* ハンバーガーメニュー */
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+    /* transition: display 0.5 ease-in-out; */
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #ffffff;
+        transition: max-height 0.5s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav-list.show {
+        display: flex;
+        max-height: 300px; 
+    }
+}
+
+.tag{
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    background-color: #50c7ff;
+    margin: 160px 70px 0 70px;
+    padding: 20px;
+    text-shadow: 0 8px 5px rgb(90, 90, 90);
+    color: white;
+
+}
+
+/* main */
+
+main{
+    padding: 0;
+    margin: 0 0 50px 0;
+    overflow: hidden;
+    /* margin-top: 135px; */
+}
+
+small{
+    color: #5D5D5D;
+    margin-left: 70px;
+}
+
+h5{
+    text-align: left;
+    font-size: 14px;
+}
+
+/* アンケート */
+form{
+    margin: 60px auto;
+    
+    width: 65%;
+}
+
+.question{
+    display: block;
+    background-color: rgba(176, 176, 176, 0.3);
+    height: 60px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+label{
+    cursor: pointer;
+}
+
+select{
+    appearance: none;  /*select内の右矢印がなくなる*/
+    -moz-appearance: none; /*Mozilla Firefox向けの外観指定*/
+    -webkit-appearance: none; /*WebKitベースのブラウザ（例: Google Chrome、Safari）向けの外観指定*/
+    border: 1px solid rgba(114, 114, 114, 0.4);
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 40px;
+    width: 200px;
+    font-size: 15px;
+    cursor: pointer;
+    /* background-color: #cfcedb; */
+}
+
+.answer{
+    margin-left: 30px;
+}
+
+.more{
+    overflow-x: auto;
+    height: 23px;
+    margin-left: 7px;
+    outline: none;
+    cursor: pointer;
+}
+
+.phrase{
+    padding: 10px;;
+    width: 70%;
+    font-size: 1rem;
+    overflow-x: auto;
+    outline: none;
+}
+
+textarea{
+    padding: 10px;
+    width: 70%;
+    font-size: 1rem;
+    height: 150px;
+    overflow-y: auto;
+    outline: none;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    transform: scale(1.7);
+    margin-right: 8px;
+}
+
+input[type="submit"]{
+    padding: 5px 20px 5px 20px;
+    margin-top: 30px;
+    background-color: rgb(112, 112, 112);
+    cursor: pointer;
+    width: 30%;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.Thankyou{
+    font-family: cursive;
+    font-size: 20px;
+    text-align: center;
+}
+
+.questionare{
+    text-align: left;
+    margin-top: 70px;
+}
+
+.submit{
+    text-align: center;
+}
+
+button:hover{cursor: pointer}
+button {
+  background: transparent; outline: none;
+  position: relative;
+  border: 2px solid #111;
+  padding: 15px 50px;
+  overflow: hidden;
+}
+
+/*button:before (attr data-hover)*/
+button:hover:before{opacity: 1; transform: translate(0,0);}
+button:before{
+  content: attr(data-hover);
+  position: absolute;
+  top: 15px; 
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  opacity: 0;
+  transform: translate(-100%,0);
+  transition: all .3s ease-in-out;
+}
+  /*button div (button text before hover)*/
+  button:hover div{opacity: 0; transform: translate(100%,0)}
+  button div{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: .8em;
+    transition: all .3s ease-in-out;
+  }
+
+/* footer */
+footer{
+    background-image: url(../img/ハイビスカス.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.pagetop{
+    border-radius: 80%;
+    background-color: rgba(80, 199, 255, 0.5);
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    top: 73%;
+    right: 3%;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+}
+
+.scroll{
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.scroll:hover{
+    transform: scale(1.1);
+    background-color: #186dff;
+}
+
+.scroll:active{
+    transform: translateY(20px);
+}
+
+.scroll.visible{
+    opacity: 1;
+}
+
+.go-top{
+    padding-left: 26px;
+    line-height: 70px;
+}
+
+.footer-lane{
+    padding-top: 30px;
+    width: 100%;
+    background: linear-gradient(to bottom, #50c7ff, rgb(255, 255, 255) 90%);
+}
+
+.footer-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+.anchor-below{
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    width: 13vw;
+    transition: 0.3s color ease-in-out;
+}
+
+.anchor-below:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.copyright{
+    text-align: center;
+    line-height: 80px;
+}
+
+
+
