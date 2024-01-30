@@ -40,7 +40,9 @@ header{
 }
 
 h3{
-    font-size: 41px;
+    font-family: serif;
+    font-weight: 600;
+    font-size: 35px;
     margin: -40px 0;
 }
 
