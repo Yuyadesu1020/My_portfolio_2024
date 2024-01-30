@@ -86,6 +86,7 @@ h3{
 }
 
 .nav{
+    font-family: serif;
     font-size: 20px;
     color: #3a3a3a;
     text-decoration: none;
@@ -142,9 +143,9 @@ h3{
 }
 
 .tag{
+    font-family: serif;
     font-size: 40px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 500;
+    font-weight: bold;
     background-color: #50c7ff;
     margin: 160px 70px 0 70px;
     padding: 20px;
@@ -163,11 +164,15 @@ main{
 }
 
 small{
+    font-family: serif;
     color: #5D5D5D;
     margin-left: 70px;
 }
 
 /* main */
+div{
+    font-family: serif;
+}
 
 .page-content{
     margin-top: 50px;
@@ -180,6 +185,7 @@ small{
 }
 
 h2{
+    font-family: serif;
     font-size: 35px;
 }
 
@@ -243,7 +249,7 @@ h2{
 h4{
     margin-top: 80px;
     text-align: center;
-    font-family: sans-serif;
+    font-family: serif;
     font-weight: 600;
     color: rgba(119, 119, 119, 0.9);
 }

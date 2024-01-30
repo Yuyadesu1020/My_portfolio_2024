@@ -86,6 +86,7 @@ h3{
 }
 
 .nav{
+    font-family: serif;
     font-size: 20px;
     color: #3a3a3a;
     text-decoration: none;
@@ -148,9 +149,9 @@ h3{
 }
 
 .tag{
+    font-family: serif;
     font-size: 40px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 500;
+    font-weight: bold;
     background-color: #50c7ff;
     margin: 160px 70px 0 70px;
     padding: 20px;
@@ -169,6 +170,7 @@ main{
 }
 
 small{
+    font-family: serif;
     color: #5D5D5D;
     margin-left: 70px;
 }
@@ -201,7 +203,16 @@ h1{
     border-radius: 15px;
 }
 
+h5{
+    font-weight: bold;
+}
+
+h5, p{
+    font-family: serif;
+}
+
 .button{
+    font-family: serif;
     display: flex;
     justify-content: right;
     align-items: end;
@@ -269,6 +280,7 @@ footer{
     gap: 50px;
 }
 .anchor-below{
+    font-family: serif;
     font-size: 18px;
     line-height: 40px;
     text-align: center;
@@ -283,6 +295,7 @@ footer{
 }
 
 .copyright{
+    font-family: serif;
     text-align: center;
     line-height: 80px;
 }

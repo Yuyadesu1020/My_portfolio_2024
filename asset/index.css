@@ -96,6 +96,7 @@ h3{
 } */
 
 .nav{
+    font-family: serif;
     font-size: 20px;
     color: #3a3a3a;
     text-decoration: none;
@@ -228,7 +229,7 @@ h1{
     left: 0;
     opacity: 1; /* 初期の透明度を1に設定 */
     transition: opacity 1s ease; /* 透明度の変化に1秒かけてイージングを付ける */
-    filter: brightness(0.6);
+    filter: brightness(0.7);
 }
 
 .image.show {
@@ -237,6 +238,7 @@ h1{
 }
 
 .go-front{
+    font-family: serif;
     font-size: 19px;
     color: white;
     width: 45vw;
@@ -269,7 +271,14 @@ h1{
     /* background-color: rgb(242, 242, 242); */
 }
 
+.stronger{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 162, 75);
+}
+
 .north, .middle, .south{
+    font-family: serif;
     text-align: left;
     width: 95vw;
     margin: 35px;
@@ -317,8 +326,9 @@ h1{
 }
 
 .border-bottom{
+    font-family: serif;
     padding: 20px;
-    font-size: 30px;
+    font-size: 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -344,6 +354,7 @@ h1{
 }
 
 .news-list{
+    font-family: serif;
     line-height: 50px;
     font-size: 20px;
     list-style-type: none;
@@ -367,6 +378,7 @@ strong{
     position: relative;
     left: 23%;
     top: 24%;
+    font-family: serif;
     font-size: 30px;
     font-weight: 600;
     color: aliceblue;
@@ -496,6 +508,7 @@ footer{
     gap: 50px;
 }
 .anchor-below{
+    font-family: serif;
     font-size: 18px;
     line-height: 40px;
     text-align: center;
@@ -510,6 +523,7 @@ footer{
 }
 
 .copyright{
+    font-family: serif;
     text-align: center;
     line-height: 80px;
 }
