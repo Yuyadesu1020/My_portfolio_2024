@@ -224,10 +224,23 @@ h2{
     font-size: 20px;
     color: black;
     line-height: 90px;
+    position: relative;
 }
 
-.g1:hover{
-    text-decoration: underline;
+.g1::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transform: translateX(-100%, 0%);
+    background-color: #3a3a3a;
+    transition: width cubic-bezier(0.215, 0.610, 0.355, 1)0.4s;
+    content: "";
+}
+
+.g1:hover:after{
+    width: 100%;
 }
 
 .image-spot{
