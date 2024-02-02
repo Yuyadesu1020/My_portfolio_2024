@@ -194,8 +194,11 @@ main{
 } */
 
 .image-inside{
-    margin-top: 150px;
+    margin: 150px auto 0 auto;
+    text-align: center;
     position: fixed;
+    width: 100%;
+    height: auto;
     z-index: -1;
 }
 
@@ -210,14 +213,11 @@ h1{
     font-size: 130px;
     /* font-weight: 500; */
     color: rgb(255, 252, 233);
-    text-align: center;
+    display: inline-block;
     margin: 20px auto 0 auto;
     padding-top: 20px;
     text-shadow: 4px 4px 2px rgb(68, 68, 68) ;
     animation: floatAnimation 3s infinite linear;
-    position: relative;
-    /* top: 20%; */
-    left: 20%;
 }
 
 .image{
@@ -285,23 +285,93 @@ h1{
     /* background-color: rgb(242, 242, 242); */
 }
 
-.back-color{
+.sidepage{
     padding-top: 20px;
-    /* margin-top: 800px; */
     background-color: rgb(255, 255, 255);
+}
+
+.flex-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 300px; */
+}
+
+.advertisement{
+    text-align: center;
+    animation: floatAnimation 1.3s infinite linear;
+}
+
+@keyframes floatAnimation{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.ad-img{
+    width: 30vw;
+    height: 80px;
+    object-fit: cover;
+    /*x軸px y軸px 影の範囲px #色*/
+    box-shadow: 8px 8px 8px #000000;
+    border-radius: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.ad-img:hover{
+    /* box-shadow: none; */
+    transform: scale(1.1);
+}
+
+h4{
+    margin: 0;
+    margin-top: 50px;
+    padding-top: 40px;
+    width: 55vw;
+    height: 25vh;
+    font-family: serif;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+    background-image: url(../img/h4_background.jpg);
 }
 
 .news-image{
     /* border-radius: 80%; */
-    height: 70%;
-    width: 550px;
+    height: 150%;
+    width: 500px;
+    margin-right: 30px;
+}
+
+.news-image2{
+    /* border-radius: 80%; */
+    height: 85%;
+    width: 500px;
     margin-right: 30px;
 }
 
 .news-box{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    height: 800px;
+    margin-top: -30px;
+    gap: 10px;
+}
+
+.flex-image{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+    gap: 200px;
 }
 
 .fade-in-element {
@@ -316,7 +386,8 @@ h1{
 .news{
     border: 9px ridge rgba(0, 0, 0, 0.3);
     width: 60vw;
-    margin-top: 60px;
+    height: 100%;
+    margin-top: 150px;
     box-shadow: 8px 8px 10px #3a3a3a;
     background-color: transparent;
 }
@@ -341,15 +412,15 @@ h1{
 }
 
 .news-list-box{
-    padding: 30px;
+    padding: 20px;
 }
 
-.alert-box{
+/* .alert-box{
     display: flex;
     justify-content: right;
-}
+} */
 
-.alert{
+/* .alert{
     font-size: 30px;
     background-color: rgb(255, 144, 40);
     color: rgb(244, 236, 232);
@@ -359,7 +430,7 @@ h1{
     text-align: center;
     line-height: 50px;
     transform: rotate(13deg);
-}
+} */
 
 .news-list{
     font-family: serif;
@@ -375,11 +446,29 @@ strong{
     text-align: left;
 }
 
-.flex-box{
-    margin-top: 100px;
+.sns{
+    position: relative;
+    top: 420px;
+    left: 10%;
     display: flex;
-    justify-content: center;
-    gap: 150px;
+    flex-direction: column;
+}
+
+.icon-queue{
+    display: flex;
+    gap: 30px;
+}
+
+.icon{
+    width: 60px;
+}
+
+.flex-box2{
+    margin-top: 50px;
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    margin-right: 30px;
 }
 
 .search-show{
@@ -545,7 +634,7 @@ footer{
   position:absolute;
   /* top: -50px; */
   bottom: -180px;
-  left: 100%;
+  left: 84%;
 }
 
 /*Scrollテキストの描写*/
