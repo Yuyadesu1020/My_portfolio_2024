@@ -24,7 +24,7 @@
                         </div>
                         <ul class="nav-list">
                             <li class="list"><a href="./index.html" class="nav">ホーム</a></li>
-                            <li class="list"><a href="#tourist" class="nav">観光地</a></li>
+                            <li class="list"><a href="./tourist.html" class="nav">観光地</a></li>
                             <li class="list"><a href="./gourment.html" class="nav">ご当地グルメ</a></li>
                             <li class="list"><a href="./hotel.html" class="nav">宿泊所</a></li>
                             <li class="list"><a href="./message.html" class="nav">メッセージ</a></li>
@@ -53,7 +53,7 @@
                 <span class="question">Q1.年齢を教えてください</span>
                 <br>
                 <br>
-                <br>
+
                 <select name="age" class="answer" required>
                     <option value="choose">選択してください</option>
                     <option value="less_10">10歳未満</option>
@@ -69,29 +69,36 @@
                 <span class="question">Q2.性別を教えてください</span>
                 <br>
                 <br>
-                <br>
+
                 <label for="man">
-                    <input type="radio" name="gender" value="man" id="man" class="answer">男性</label>
+                    <input type="radio" name="gender" value="man" id="man" class="answer">男性
+                </label>
                 <br>
                 <br>
-                <label for="woman"><input type="radio" name="gender" value="woman" id="woman" class="answer">女性</label>
+                <label for="woman">
+                    <input type="radio" name="gender" value="woman" id="woman" class="answer">女性
+                </label>
             </p>
             <p class="questionare">
                 <span class="question">Q3.このサイトはご満足いただけましたか？</span>
                 <br>
                 <br>
+
+                <label for="yes" class="answer">
+                    <input type="radio" name="satisfaction" value="yes" id="yes">はい
+                </label>
                 <br>
-                <label for="yes" class="answer"><input type="radio" name="satisfaction" value="yes" id="yes">はい</label>
                 <br>
-                <br>
-                <label for="no" class="answer"><input type="radio" name="come" value="no" id="no">いいえ</label>
+                <label for="no" class="answer">
+                    <input type="radio" name="come" value="no" id="no">いいえ
+                </label>
             </p>
             <p class="questionare">
                 <span class="question">Q4.ウェブサイトの内容・コンテンツをどのように感じましたか。</span>
                 <br>
                 <br>
-                <br>
-                <div>
+
+                <div class="reputation">
                     <label for="best">
                         <input type="radio" name="evacuation" value="best" id="best" class="answer">
                         良かった
@@ -118,7 +125,7 @@
                 <span class="question">Q5.沖縄旅行の目的を教えてください</span>
                 <br>
                 <br>
-                <br>
+
                 <div class="answer">
                     <label for="hotel">
                         <input type="radio" name="purpose" value="hotel" id="hotel" class="answer">
@@ -183,14 +190,14 @@
                 <label for="expression" class="question">Q7.沖縄を一言で表すなら？</label>
                 <br>
                 <br>
-                <br>
+
                 <input type="text" name="express" placeholder="" id="expression" class="answer phrase">
             </p>
             <p class="questionare">
-                <label for="message" class="question">※沖縄に来られた方、これから行きたいと思う方、沖縄に対するご意見をなんでもお聞かせください<br>いただいた情報を元にこれからもこちらのページを更新していきます！</label>
+                <label for="message" class="question question2">※沖縄に来られた方、これから行きたいと思う方、沖縄に対するご意見をなんでもお聞かせください<br>いただいた情報を元にこれからもこちらのページを更新していきます！</label>
                 <br>
                 <br>
-                <br>
+
                 <textarea name="message" id="message" class="answer"></textarea>
             </p>
             <p class="submit">

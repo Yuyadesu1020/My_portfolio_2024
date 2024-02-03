@@ -119,32 +119,70 @@ h3{
     /* transition: display 0.5 ease-in-out; */
 }
 
-@media only screen and (max-width: 768px) {
+/* ヘッダーレスポンシブ */
+@media screen and (max-width: 1270px) {
+    body{
+        height: 100%;
+    }
+    
+    .flex{
+        height: 40px;
+        width: 100%;
+        justify-content: left;
+        gap: 50px;
+    }
+    
+    h3{
+        font-size: 20px;
+        margin: 0;
+    }
+    
     .menu-toggle {
         display: block;
+        /* margin-top: 10px; */
     }
-
+    
+    .header-right{
+        margin-right: 30px;
+        gap: 30px;
+    
+    }
+    
     .nav-list {
         display: none;
         flex-direction: column;
-        width: 100%;
+        text-align: center;
+        width: 120%;
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
-        background-color: #ffffff;
+        /* right: 0; */
+        background-color: rgba(255, 255, 255, 0.9);
         transition: max-height 0.5s ease-in-out;
         max-height: 0;
         overflow: hidden;
     }
-
+    
     .nav-list.show {
         display: flex;
         max-height: 300px; 
     }
-}
+    }
+    
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 
 .tag{
-    font-family: serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 40px;
     font-weight: bold;
     background-color: #50c7ff;
@@ -249,7 +287,7 @@ input[type="checkbox"]{
     margin-right: 8px;
 }
 
-input[type="submit"]{
+/* input[type="submit"]{
     padding: 5px 20px 5px 20px;
     margin-top: 30px;
     background-color: rgb(112, 112, 112);
@@ -258,7 +296,7 @@ input[type="submit"]{
     color: white;
     border-radius: 5px;
     border: none;
-}
+} */
 
 .Thankyou{
     font-family: cursive;
@@ -309,7 +347,99 @@ button:before{
     font-weight: 800;
     font-size: .8em;
     transition: all .3s ease-in-out;
-  }
+}
+
+/* mainのレスポンシブ */
+@media screen and (max-width: 1270px){
+    main{
+        margin: 0;
+    }
+
+    .tag{
+        height: 8px;
+        line-height: 8px;
+        font-size: 18px;
+        margin: 110px 20px 0 20px;
+    }
+
+    small{
+        margin-left: 20px;
+    }
+
+    form{
+        margin-top: 30px;
+        width: 75%;
+    }
+    
+    h5{
+        font-size: 12px;
+    }
+
+    .questionare{
+        margin-top: 50px;
+    }
+
+    .question{
+        height: 20px;
+        padding: 13px;
+        font-size: 10px;
+    }
+
+    label{
+        font-size: 10px;
+    }
+
+    select{
+        font-size: 10px;
+        width: 100px;
+        height: 30px;
+    }
+
+    .answer{
+        margin-left: 10px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"]{
+        transform: scale(1.2);
+        margin-right: 8px;
+    }
+
+    .reputation{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .phrase{
+        font-size: 13px;
+        height: 10px;
+    }
+
+   .question2{
+        height: 40px;
+        font-size: 7px;
+   }
+
+    textarea{
+        width: 85%;
+        height: 70px;
+        font-size: 10px;
+    }
+
+    .submit{
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .Thankyou{
+        font-size: 13px;
+    }
+
+    button{
+        padding: 10px 30px;
+    }
+}
 
 /* footer */
 footer{
@@ -388,5 +518,24 @@ footer{
     line-height: 80px;
 }
 
+/* footerのレスポンシブ */
+@media screen and (max-width: 1270px) {
+    footer{
+       width: 100%;
+       height: 10vh;
+    }
 
+    .footer-lane{
+        padding-top: -30px;
+    }
+
+    .anchor-below{
+        width: 25vw;
+    }
+
+    .anchor-below{
+        font-size: 14px;
+        width: 35vw;
+    }
+}
 

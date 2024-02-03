@@ -41,7 +41,6 @@ header{
 
 h3{
     font-family: serif;
-    font-weight: 600;
     font-size: 35px;
     margin: -40px 0;
 }
@@ -76,9 +75,9 @@ h3{
     transform: translateY(3px);
 }
 
-.nav-list{
-    /* margin-right: 50px; */
-    padding-right: 20px;
+.hamburger-list{
+    margin-right: 50px;
+    padding-right: 40px;
     display: flex;
     gap: 28px;
 }
@@ -113,12 +112,6 @@ h3{
 .nav:hover:after{
     width: 100%;
 }
-
-.navbar{
-    height: 60px;
-    line-height: 45px;/
-}
-
 /* ハンバーガーメニュー */
 .menu-toggle {
     cursor: pointer;
@@ -126,32 +119,70 @@ h3{
     /* transition: display 0.5 ease-in-out; */
 }
 
-@media only screen and (max-width: 768px) {
+/* ヘッダーレスポンシブ */
+@media screen and (max-width: 1270px) {
+    body{
+        height: 100%;
+    }
+    
+    .flex{
+        height: 40px;
+        width: 100%;
+        justify-content: left;
+        gap: 50px;
+    }
+    
+    h3{
+        font-size: 20px;
+        margin: 0;
+    }
+    
     .menu-toggle {
         display: block;
+        /* margin-top: 10px; */
     }
-
-    .nav-list {
+    
+    .header-right{
+        margin-right: 30px;
+        gap: 30px;
+    
+    }
+    
+    .hamburger-list {
         display: none;
         flex-direction: column;
-        width: 100%;
+        text-align: center;
+        width: 120%;
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
-        background-color: #ffffff;
+        /* right: 0; */
+        background-color: rgba(255, 255, 255, 0.9);
         transition: max-height 0.5s ease-in-out;
         max-height: 0;
         overflow: hidden;
     }
-
-    .nav-list.show {
+    
+    .hamburger-list.show {
         display: flex;
         max-height: 300px; 
     }
-}
+    }
+    
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 
 .tag{
-    font-family: serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 40px;
     font-weight: bold;
     background-color: #50c7ff;
@@ -189,20 +220,20 @@ h1{
 .cards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: auto auto auto 35px;
+    /* margin: auto auto auto 35px; */
     padding: 100px;
     /* justify-content: center; */
     /* place-content: center;  */
     /* margin-top: 50px; */
-    gap: 70px;
-    max-width: 100%;
+    gap: 30px;
+    /* max-width: 100%; */
 }
 
 .card{
     max-width: 95%;
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
-    background-color: rgba(245, 245, 220, 0.5);
+    background-color: rgba(254, 255, 212, 0.5);
 }
 
 h5{
@@ -220,7 +251,91 @@ h5{
 }
 
 img{
+    width: 390px;
     height: 350px;
+}
+
+.btn{
+    border: 1px solid rgba(12, 142, 255, 0.709);
+    border-radius: 10px;
+    background-color: rgba(12, 142, 255, 0.709);
+    width: 9vw;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #000000;
+    transition: all 0.4s ease;
+}
+
+.btn:hover{
+    color: rgba(12, 142, 255, 0.709);
+    background-color: #ffffff;
+}
+
+/* mainのレスポンシブ */
+@media screen and (max-width: 1270px){
+    .tag{
+        height: 8px;
+        line-height: 8px;
+        font-size: 18px;
+        margin: 110px 20px 0 20px;
+    }
+
+    small{
+        margin-left: 20px;
+    }
+
+    h1{
+        font-size: 25px;
+        text-align: center;
+        margin: 0;
+        margin-top: 30px;
+    }
+
+    .food{
+        margin-top: 20px;
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0 0 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .card{
+        padding: 0;
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    img{
+        border-radius: 10px 0 0 10px;
+        width: 120px;
+        height: 150px;
+    }
+
+    h5{
+        text-align: center;
+    }
+
+    .info{
+        padding-right: 10px;
+    }
+
+    .btn{
+        width: 150px;
+    }
+
+    .button{
+        padding: 0;
+    }
 }
 
 footer{
@@ -299,8 +414,24 @@ footer{
     line-height: 80px;
 }
 
+/* footerのレスポンシブ */
+@media screen and (max-width: 1270px) {
+    footer{
+       width: 100%;
+       height: 10vh;
+    }
 
+    .footer-lane{
+        padding-top: -30px;
+    }
 
+    .anchor-below{
+        width: 25vw;
+    }
 
+    .anchor-below{
+        font-size: 14px;
+        width: 35vw;
+    }
+}
 
-/* message.css用 */

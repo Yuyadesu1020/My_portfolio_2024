@@ -1,6 +1,6 @@
 // ハンバーガーメニュー
 document.getElementById('mobile-menu').addEventListener('click', function() {
-    var navList = document.querySelector('.nav-list');
+    var navList = document.querySelector('.hamburger-list');
     navList.classList.toggle('show');
 
     // JavaScriptで初期 max-height を設定

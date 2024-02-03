@@ -17,16 +17,6 @@ header{
 }
 
 .flex{
-    /* background-color: white;
-    border-right: 2px solid rgb(118, 118, 118);
-    border-bottom: 2px solid rgb(118, 118, 118);
-    border-radius: 0 0 20px 0;
-    width: 93%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px; */
     border-right: 2px solid rgb(118, 118, 118);
     /* border-bottom: 2px solid rgb(118, 118, 118); */
     width: 100%;
@@ -51,7 +41,6 @@ header{
 
 h3{
     font-family: serif;
-    font-weight: 600;
     font-size: 35px;
     margin: -40px 0;
 }
@@ -87,8 +76,8 @@ h3{
 }
 
 .nav-list{
-    /* margin-right: 50px; */
-    padding-right: 20px;
+    margin-right: 50px;
+    padding-right: 40px;
     display: flex;
     gap: 28px;
 }
@@ -123,12 +112,6 @@ h3{
 .nav:hover:after{
     width: 100%;
 }
-
-.navbar{
-    height: 60px;
-    line-height: 45px;/
-}
-
 /* ハンバーガーメニュー */
 .menu-toggle {
     cursor: pointer;
@@ -136,32 +119,70 @@ h3{
     /* transition: display 0.5 ease-in-out; */
 }
 
-@media only screen and (max-width: 768px) {
+/* ヘッダーレスポンシブ */
+@media screen and (max-width: 1270px) {
+    body{
+        height: 100%;
+    }
+    
+    .flex{
+        height: 40px;
+        width: 100%;
+        justify-content: left;
+        gap: 50px;
+    }
+    
+    h3{
+        font-size: 20px;
+        margin: 0;
+    }
+    
     .menu-toggle {
         display: block;
+        /* margin-top: 10px; */
     }
-
+    
+    .header-right{
+        margin-right: 30px;
+        gap: 30px;
+    
+    }
+    
     .nav-list {
         display: none;
         flex-direction: column;
-        width: 100%;
+        text-align: center;
+        width: 120%;
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
-        background-color: #ffffff;
+        /* right: 0; */
+        background-color: rgba(255, 255, 255, 0.9);
         transition: max-height 0.5s ease-in-out;
         max-height: 0;
         overflow: hidden;
     }
-
+    
     .nav-list.show {
         display: flex;
         max-height: 300px; 
     }
-}
+    }
+    
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 
 .tag{
-    font-family: serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 40px;
     font-weight: bold;
     background-color: #50c7ff;
@@ -185,6 +206,10 @@ small{
     font-family: serif;
     color: #5D5D5D;
     margin-left: 70px;
+}
+
+.first{
+    font-size: 30px;
 }
 
 .message-box{
@@ -215,11 +240,9 @@ small{
 }
 
 .image-post{
-    /* position: absolute;
-    top: 140%;
-    left: 60%; */
+    width: 24vw; 
+    height: 30vh;
     display: block;
-    /* border-radius: 30px; */
     margin: 0 auto;
 }
 
@@ -256,6 +279,11 @@ small{
     opacity: 0.6;
 }
 
+.figure{
+    width: 10vw;
+    height: 14vh;
+}
+
 .fade-in-element{
     opacity: 0; /* 初めは非表示にする */
     transition: opacity 1s ease; /* フェードインのアニメーションを追加 */
@@ -272,6 +300,81 @@ small{
 .box{
     background-color: #f2ff00;
     border-radius: 10px;
+}
+
+iframe{
+    width: 470px;
+    height: 250px;
+}
+
+/* mainのレスポンシブ */
+@media screen and (max-width: 1270px){
+    main{
+        margin: 0;
+    }
+
+    .tag{
+        height: 8px;
+        line-height: 8px;
+        font-size: 18px;
+        margin: 110px 20px 0 20px;
+    }
+
+    small{
+        margin-left: 20px;
+    }
+
+    .message-box{
+        margin: 20px auto 25px auto;
+        line-height: 20px;
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .first{
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .flex-box{
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .image-post{
+        width: 35vw;
+        height: 12vh;
+        margin: 13px;
+    }
+
+    .additional{
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .journey{
+        width: 70vw;
+        padding: 10px;
+    }
+
+    figure{
+       margin: 7px;
+    }
+
+    .figure{
+        width: 13vw;
+        height: 6vh;
+    }
+
+    .left{
+        font-size: 10px;
+        margin-left: 0;
+    }
+
+    iframe{
+        width: 300px;
+        height: 200px;
+    }
 }
 
 footer{
@@ -349,4 +452,25 @@ footer{
     font-family: serif;
     text-align: center;
     line-height: 80px;
+}
+
+/* footerのレスポンシブ */
+@media screen and (max-width: 1270px) {
+    footer{
+       width: 100%;
+       height: 10vh;
+    }
+
+    .footer-lane{
+        padding-top: -30px;
+    }
+
+    .anchor-below{
+        width: 25vw;
+    }
+
+    .anchor-below{
+        font-size: 14px;
+        width: 35vw;
+    }
 }

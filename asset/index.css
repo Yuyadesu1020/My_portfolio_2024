@@ -137,50 +137,53 @@ h3{
 
 /* ヘッダーレスポンシブ */
 @media screen and (max-width: 1270px) {
-body{
-    height: 100%;
-}
+    body{
+        height: 100%;
+    }
 
-.flex{
-    height: 40px;
-    width: 100%;
-    justify-content: left;
-    gap: 50px;
-}
+    .flex{
+        height: 40px;
+        width: 100%;
+        justify-content: left;
+        gap: 50px;
+    }
 
-h3{
-    font-size: 20px;
-    margin: 0;
-}
+    h3{
+        font-size: 20px;
+        margin: 0;
+    }
 
-.menu-toggle {
-    display: block;
-    margin-top: 17px;
-}
+    .menu-toggle {
+        display: block;
+        margin-top: 17px;
+    }
 
-.header-right{
-    margin-right: 30px;
-    gap: 30px;
+    .header-right{
+        margin-right: 30px;
+        gap: 30px;
 
-}
+    }
 
-.nav-list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #ffffff;
-    transition: max-height 0.5s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
-}
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 120%;
+        padding: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        transition: max-height 0.5s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+    }
 
-.nav-list.show {
-    display: flex;
-    max-height: 300px; 
-}
+    .nav-list.show {
+        display: flex;
+        max-height: 300px; 
+    }
 }
 
 @keyframes floatAnimation {
@@ -785,9 +788,7 @@ footer{
 @media screen and (max-width: 1270px) {
     footer{
        width: 100%;
-       background-position: center;
-       height: 90vh;
-       background-position: 40% 60%;
+       height: 10vh;
     }
 
     .footer-lane{
