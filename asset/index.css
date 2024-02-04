@@ -348,27 +348,26 @@ h4{
     width: 55vw;
     height: 25vh;
     font-family: serif;
-    color: #000000;
+    color: #ffffff;
     /* text-shadow: 10px 10px 10px #000000; */
     font-size: 20px;
     line-height: 60px;
     text-align: center;
-    background-image: url(../img/h4_background.jpg);
+    background-image: url(../img/index.jpeg);
     /* background-color: rgba(255, 255, 255, 0.6); */
     background-repeat: no-repeat;
-    background-position: 30% 70%;
+    background-position: 50%;
     background-size: cover;
 }
 
 .span-box{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(71, 72, 72, 0.5);
 }
 
 .news-image{
     /* border-radius: 80%; */
-    height: 150%;
-    width: 500px;
-    margin-right: 30px;
+    height: 45%;
+    width: 400px;
 }
 
 .news-image2{
@@ -382,17 +381,37 @@ h4{
     display: flex;
     justify-content: center;
     height: 800px;
-    margin-top: -30px;
-    gap: 10px;
+    margin: 60px 40px 0 60px;
+    gap: 100px;
 }
 
 .flex-image{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 800px;
-    gap: 200px;
+    justify-content: space-around;
+    /* height: 800px; */
+    /* gap: 10px; */
+}
+
+.profile{
+    background-color: rgb(6, 65, 113);
+    font-size: 20px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    color: azure;
+    padding: 18px;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    width: 75%;
+    transition: all 0.3s ease;
+}
+
+.profile:hover{
+    background-color: azure;
+    color: rgb(6, 65, 113);
+    border: 3px solid rgb(6, 65, 113);
 }
 
 .fade-in-element {
@@ -408,7 +427,7 @@ h4{
     border: 9px ridge rgba(0, 0, 0, 0.3);
     width: 60vw;
     height: 100%;
-    margin-top: 150px;
+    /* margin-top: 150px; */
     box-shadow: 8px 8px 10px #3a3a3a;
     background-color: transparent;
 }
@@ -451,9 +470,9 @@ strong{
 }
 
 .sns{
-    position: relative;
+    /* position: relative;
     top: 420px;
-    left: 10%;
+    left: 10%; */
     display: flex;
     flex-direction: column;
 }
@@ -473,11 +492,18 @@ strong{
 }
 
 .flex-box2{
-    margin-top: 50px;
-    margin-right: 30px;
     display: flex;
-    justify-content: right;
-    gap: 30px;
+    /* justify-content: right; */
+    gap: 90px;
+}
+
+.flex-box3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin-top: 50px;
 }
 
 .search-show{
@@ -612,7 +638,7 @@ canvas{
     }
 
     h4{
-        width: 500px;
+        width: 90%;
         height: 90px;
         line-height: 15px;
     }
@@ -621,22 +647,31 @@ canvas{
         font-size: 8px;
         display: block;
         margin: 0 auto;
-        width: 75%;
+        width: 100%;
     }
 
     .flex-image{
         flex-direction: row;
-        gap: 0;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .news-image,.news-image2{
         display: none;
     }
 
+    .profile{
+        width: 120%;
+        /* height: 20%; */
+    }
+
     .news-box{
-        margin-top: -270px;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        gap: 40px;
+        margin: -30px 20px;
     }
 
     .news-list-box{
@@ -644,7 +679,9 @@ canvas{
     }
 
     .news{
+        padding: 10px;
         width: 90%;
+        height: 64%;
     }
 
     .attention, .pin{
@@ -656,9 +693,19 @@ canvas{
         font-size: 10px;
     }
 
+    ul{
+        padding-left: 15px;
+    }
+
     .news-list{
         font-size: 8px;
         line-height: 30px;
+    }
+
+    .flex-box3{
+        flex-direction: column;
+        margin-top: 0;
+        gap: 20px;
     }
 
     .flex-box2{
@@ -668,38 +715,39 @@ canvas{
     }
 
     .search{
-        margin-top: -150px;
+        /* margin-top: -150px; */
     }
 
     .search-show{
         font-size: 15px;
         width: 57vw;
-        top: 130px;
-        left: 25%;
+        top: 90px;
+        left: 18%;
     }
 
     .search-image{
         width: 100%;
         height: 190px;
-        margin-top: 50px;
+        /* margin-top: 50px; */
         outline: none;
     }
 
     .search-bar{
         bottom: 80px;
-        left: 15%;
+        left: 5%;
     }
 
     .input-search{
         width: 54vw;
+        margin-right: 10px;
     }
 
     .iframe-box{
         width: 100%;
         margin-top: 0;
-        margin-bottom: 200px;
+        /* margin-bottom: 200px; */
         align-items: center;
-        gap: 20px;
+        gap: 40px;
     }
 
     .sns{
