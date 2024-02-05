@@ -11,42 +11,7 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
         navList.style.maxHeight = "0";
     }
 });
-
-// スライドショー
-document.addEventListener("DOMContentLoaded", function() {
-    let currentImageIndex = 0;
-    const images = ["./img/slide1.jpg", "./img/slide2.jpg", "./img/slide3.jpg"];
-    const imageElement = document.querySelector('.image'); // 変数名を修正
-
-    function changeImage() {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        const newImageSrc = images[currentImageIndex];
-
-        // 新しい画像の読み込み
-        const newImage = new Image();
-        newImage.src = newImageSrc;
-
-        // 画像が読み込まれたら表示
-        newImage.onload = function() {
-            fadeOut(); // フェードアウト
-            setTimeout(() => {
-                imageElement.src = newImageSrc;
-                fadeIn(); // フェードイン
-            }, 1000);
-        };
-    }
-    function fadeIn() {
-        imageElement.style.transition = "opacity 1.5s ease"; // 1.5秒かけてイージングを付ける
-        imageElement.style.opacity = 1; // 画像を表示するときにゆっくりとフェードイン
-    }
-
-    function fadeOut() {
-        imageElement.style.transition = "opacity 1.5s ease"; // 1.5秒かけてイージングを付ける
-        imageElement.style.opacity = 0; // 新しい画像が読み込まれる前に透明にする
-    }
-
-    setInterval(changeImage, 3500); // 4000ミリ秒ごとに画像を切り替える（4秒ごと）
-});
+  
 
 //フェードイン
 $(window).scroll(function(){
@@ -64,6 +29,7 @@ $(window).scroll(function(){
         }
     });
 });
+
 
 // スクロールすると、pagetopボタンのフェードイン、フェードアウト
 document.addEventListener("DOMContentLoaded", function(){
