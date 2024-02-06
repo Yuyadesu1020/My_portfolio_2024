@@ -103,11 +103,3 @@ $(window).scroll(function(){
     });
 });
 
-// ビデオ要素を取得
-var video = document.getElementById("backgroundVideo");
-
-// ビデオの再生速度を設定
-video.playbackRate = 0.5; // 0.5倍速
-
-// ビデオの再生を開始
-video.play();

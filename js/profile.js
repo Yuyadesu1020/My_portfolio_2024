@@ -1,35 +1,4 @@
 
-// ハンバーガーメニュー
-document.getElementById('mobile-menu').addEventListener('click', function() {
-    var navList = document.querySelector('.nav-list');
-    navList.classList.toggle('show');
-
-    // JavaScriptで初期 max-height を設定
-    if (navList.classList.contains('show')) {
-        navList.style.maxHeight = navList.scrollHeight + "px";
-    } else {
-        navList.style.maxHeight = "0";
-    }
-});
-  
-
-//フェードイン
-$(window).scroll(function(){
-    //ウィンドウの高さ
-    const height = $(window).height();
-    //現在のスクロール位置
-    const scroll = $(window).scrollTop();
-    $(".fade-in-element").each(function(){
-        //offsetは選択したドキュメントの位置情報、top＝上からの
-        //つまり、選択したドキュメント"ここでは$(this)=fade-in-element"の上からの位置情報
-        const imgPosition = $(this).offset().top;
-
-        if(scroll > imgPosition - 700){
-            $(this).addClass("fadeIn");
-        }
-    });
-});
-
 
 // スクロールすると、pagetopボタンのフェードイン、フェードアウト
 document.addEventListener("DOMContentLoaded", function(){
@@ -63,4 +32,34 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: "smooth"
         });
     });
+});
+
+
+window.addEventListener('scroll', function() {
+    // 全てのjs-fadeクラスを持つ要素に対して処理を行う
+    var elements = document.querySelectorAll('.js-right, .js-down, .js-down_deep, .js-left');
+    elements.forEach(function(element) {
+        // 要素の位置を取得
+        var pos = element.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+        // スクロール位置と要素の位置を比較してフェードインの条件を満たしているか確認
+        if (pos < windowHeight - 200) {
+            // 要素を表示するためのスタイルを適用
+            element.classList.add('scroll', 'scroll2');
+        }
+    });
+});
+
+
+// ハンバーガーメニュー
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    var navList = document.querySelector('.nav-list');
+    navList.classList.toggle('show');
+
+    // JavaScriptで初期 max-height を設定
+    if (navList.classList.contains('show')) {
+        navList.style.maxHeight = navList.scrollHeight + "px";
+    } else {
+        navList.style.maxHeight = "0";
+    }
 });

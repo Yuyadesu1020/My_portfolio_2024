@@ -405,34 +405,42 @@ h4{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 17px;
+    width: 100%;
+    gap: 7px;
+    border: 1px solid #b8b8b8;
+    padding: 5px;
 }
 
 .my_image{
-    width: 17%;
-    height: 100%;
-    border-radius: 50%;
+    width: 33%;
+    height: 80%;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .profile{
-    background-color: rgb(6, 65, 113);
-    font-size: 15px;
+    font-size: 12px;
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-weight: bold;
-    color: azure;
-    padding: 18px;
+    color: black;
+    padding: 13px;
     /* margin: 0 auto; */
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     width: 50%;
     transition: all 0.3s ease;
 }
 
-.profile:hover{
+.me{
+    color: #9e9e9e;
+    font-family: serif;
+    font-size: 9px;
+}
+
+/* .profile:hover{
     background-color: azure;
     color: rgb(6, 65, 113);
     border: 3px solid rgb(6, 65, 113);
-}
+} */
 
 .fade-in-element {
     opacity: 0; /* 初めは非表示にする */
@@ -651,14 +659,25 @@ canvas{
         display: none;
     }
 
+    .profile-box{
+        /* padding: 10px; */
+        width: 350px;
+        flex-direction: column;
+        margin: 0 30px;
+    }
+
     .profile{
-        width: 60vw;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     }
 
     .my_image{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
+        width: 350px;
+        height: 200px;
+        /* border-radius: 50%; */
     }
 
     .news-box{
@@ -666,7 +685,8 @@ canvas{
         justify-content: center;
         align-items: center;
         gap: 40px;
-        margin: -30px 20px;
+        /* width: 100%; */
+        margin: 30px 20px;
     }
 
     .news-list-box{
