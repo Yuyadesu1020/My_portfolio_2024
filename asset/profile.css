@@ -86,7 +86,7 @@ h4{
 .js-down_deep{
     opacity: 0;
     visibility: hidden;
-    transform: translateY(150px);
+    transform: translateY(120px);
     transition: opacity 3.5s,visibility 3s, transform 1s;
 }
 

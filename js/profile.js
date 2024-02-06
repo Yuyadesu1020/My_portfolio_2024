@@ -43,7 +43,7 @@ window.addEventListener('scroll', function() {
         var pos = element.getBoundingClientRect().top;
         var windowHeight = window.innerHeight;
         // スクロール位置と要素の位置を比較してフェードインの条件を満たしているか確認
-        if (pos < windowHeight - 200) {
+        if (pos < windowHeight - 50) {
             // 要素を表示するためのスタイルを適用
             element.classList.add('scroll', 'scroll2');
         }
