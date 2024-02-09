@@ -231,8 +231,6 @@ header{
     margin-top: 100px;
 }
 
-
-
 .good{
     text-align: center;
 }
@@ -282,6 +280,10 @@ header{
 .skill-list{
     margin-bottom: 10px;
     font-size: 14px;
+}
+
+.spot{
+    list-style-type: square;
 }
 
 .logo-box{
@@ -350,9 +352,6 @@ header{
 }
 
 .sns{
-    /* position: relative;
-    top: 420px;
-    left: 10%; */
     display: flex;
     flex-direction: column;
 }
@@ -373,7 +372,7 @@ header{
 }
 
 .copyright{
-    margin:70px 0 30px 150px;
+    padding:70px 0 30px 150px;
 }
 
 @media screen and (max-width: 840px){
@@ -523,6 +522,10 @@ header{
         padding: 0 50px;
     }
 
+    .skill-list{
+        font-size: 10px;
+    }
+
     .logo-box{
         display: flex;
         gap: 5px;
@@ -549,17 +552,25 @@ header{
     .contact{
         background-size: cover;
         color: white;
-        margin-top: 90px;
+        margin: 0;
     }
 
     .info6{
-        margin-left: 30px;
+        padding-left: 30px;
+        margin: 0;
         gap: 10px;
     }
 
+    .icon-queue{
+        padding-top: 10px;
+    }
+
     .copyright{
-        margin:20px 0 0 0;
+        padding: 0;
         text-align: center;
+        padding: 20px 0;
+        font-size: 7px;
+        font-family: serif;
     }
 
     .icon{
