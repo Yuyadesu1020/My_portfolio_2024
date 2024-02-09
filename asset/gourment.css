@@ -220,20 +220,20 @@ h1{
 .cards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* margin: auto auto auto 35px; */
-    padding: 100px;
-    /* justify-content: center; */
-    /* place-content: center;  */
-    /* margin-top: 50px; */
     gap: 30px;
-    /* max-width: 100%; */
+    /* width: 1200px; */
+    /* margin: 0 auto; */
 }
 
 .card{
-    max-width: 95%;
+    max-width: 100%;
     padding: 25px;
+    margin: 0 auto;
     border-radius: 15px;
-    background-color: rgba(254, 255, 212, 0.5);
+    border: 1px solid #000000;
+    height: 500px;
+    width: 450px;
+    /* background-color: rgba(254, 255, 212, 0.5); */
 }
 
 h5{
@@ -246,13 +246,26 @@ h5{
     display: flex;
     justify-content: right;
     align-items: end;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     padding-right: 20px;
 }
 
+.info-image{
+    width: 100%;
+    height: 300px;
+}
+
 img{
-    width: 390px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
+}
+
+.info{
+    padding-top: 30px;
+}
+
+.card-title{
+    font-size: 20px;
 }
 
 .btn{
@@ -310,23 +323,21 @@ img{
         padding: 0;
         width: 300px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        /* justify-content: space-between */
         align-items: center;
     }
 
-    img{
-        border-radius: 10px 0 0 10px;
-        width: 120px;
-        height: 150px;
-    }
 
     h5{
         text-align: center;
     }
 
     .info{
-        padding-right: 10px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .btn{

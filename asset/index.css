@@ -379,7 +379,6 @@ h4{
     height: 250px;
     /* transform: translateX(70px) translateY(80px); */
     transform: rotate(5deg);
-    z-index: 10;
 }
 
 .image-box > img{

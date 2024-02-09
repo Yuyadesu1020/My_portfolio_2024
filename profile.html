@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#Yuyaプロフィール</title>
+    <link rel="stylesheet" href="./asset/reset.css">
     <link rel="stylesheet" href="./asset/profile.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
         <img src="./img/profile.jpg" alt="" class="hero-image">
         <div class="info1">
             <h1 class="subtitle"><span style="color: rgb(168, 58, 58);">Yuya </span><br> Kamachi</h1>
-            <div>
+            <div class="sub-info">
                 <span style="color: rgb(168, 58, 58);">-名桜大学&nbsp;4年生<br>
                 -国際学群&nbsp;国際学部&nbsp;語学教育専攻 &nbsp;メーガンゼミ</span><br><br>
                 沖縄北部にある名護の大学で英語を中心に勉強を励んでいます。<br>
@@ -30,8 +31,12 @@
 
     <section class="profile1">
         <div class="profile-image1">
-            <img src="./img/profile14.jpg" alt="" class="image1">
-            <img src="./img/profile20.jpg" alt="" class="image2">
+            <div  class="image1">
+                <img src="./img/profile14.jpg" alt="">
+            </div>
+            <div class="image2">
+                <img src="./img/profile20.jpg" alt="">
+            </div>
         </div>
         <div class="info2">
             <h2 class="subtitle2 js-right"><span style="color: rgb(168, 58, 58);">エンジニアのスキルを求めて</span></h2>
@@ -101,46 +106,48 @@
 
     <section class="profile4">
         <div class="profile-image2">
-            <!-- <div> -->
-                <img src="./img/profile15.jpg" alt="" class="image4">
-            <!-- </div> -->
-            <!-- <div> -->
-                <img src="./img/profile4.jpg" alt="" class="image5">
-            <!-- </div> -->
+            <div class="image4">
+                <img src="./img/profile15.jpg" alt="">
+            </div>
+            <div class="image5">
+                <img src="./img/profile4.jpg" alt="">
+            </div>
         </div>
         <div class="info4">
-            <h2 class="subtitle2 js-left">スキル・資格（免許）</h2>
-            <ul class="skills js-left">
-                <li class="skill-list">プログラミング言語&nbsp;（経験期間：6ヶ月）</li>
-                <div class="logo-box">
-                    <div class="logo">
-                        HTML
-                        <img src="./img/html.png" alt="" class="programming-logo">
+            <div class="skill-box">
+                <h2 class="subtitle2 js-left">スキル・資格（免許）</h2>
+                <ul class="skills js-left">
+                    <li class="skill-list">プログラミング言語&nbsp;（経験期間：6ヶ月）</li>
+                    <div class="logo-box">
+                        <div class="logo">
+                            HTML
+                            <img src="./img/html.png" alt="" class="programming-logo">
+                        </div>
+                        <div class="logo">
+                            CSS
+                            <img src="./img/css.png" alt="" class="programming-logo">
+                        </div>
+                        <div class="logo">
+                            JavaScipt
+                            <img src="./img/js.png" alt="" class="programming-logo">
+                        </div>
+                        <div class="logo">
+                            Jquery
+                            <img src="./img/jquery.png" alt="" class="programming-logo">
+                        </div>
+                        <div class="logo">
+                            React
+                            <img src="./img/React.png" alt="" class="programming-logo">
+                        </div>
                     </div>
-                    <div class="logo">
-                        CSS
-                        <img src="./img/css.png" alt="" class="programming-logo">
-                    </div>
-                    <div class="logo">
-                        JavaScipt
-                        <img src="./img/js.png" alt="" class="programming-logo">
-                    </div>
-                    <div class="logo">
-                        Jquery
-                        <img src="./img/jquery.png" alt="" class="programming-logo">
-                    </div>
-                    <div class="logo">
-                        React
-                        <img src="./img/React.png" alt="" class="programming-logo">
-                    </div>
-                </div>
-                <li class="skill-list">英語</li>
-                    <ul class="certificate">
-                        <li>英検2級</li>
-                        <li>TOEIC&nbsp;680点</li>
-                    </ul>
-                <li class="skill-list">普通自動車第一種運転免許（AT限定）</li>
-            </ul>
+                    <li class="skill-list">英語</li>
+                        <ul class="certificate">
+                            <li>英検2級</li>
+                            <li>TOEIC&nbsp;680点</li>
+                        </ul>
+                    <li class="skill-list">普通自動車第一種運転免許（AT限定）</li>
+                </ul>
+            </div>
 
             <div class="strong js-left">
                 <h2 class="subtitle2"><span style="color: rgb(168, 58, 58);">自己PR</span></h2>
