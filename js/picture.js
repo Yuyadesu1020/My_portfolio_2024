@@ -47,33 +47,40 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// 画像クリック時、ページ全体に画像拡大 :toggleはオンオフを切り替えることを言う
+var isZoomed = false; // 初期状態では拡大表示されていない
+
 function toggleZoom(element) {
     var parentDiv = element.closest('.div');
     var zoomImage = parentDiv.querySelector('.zoomed-image');
     var zoomOverlay = parentDiv.querySelector('.zoom-overlay');
     var zoomedImage = zoomOverlay.querySelector('.zoomed-image');
 
-    zoomedImage.src = zoomImage.src;
-    zoomOverlay.style.display = 'flex';
-
-    zoomOverlay.classList.remove('zoomed');
-    setTimeout(function () {
+    if (!isZoomed) { // 拡大表示されていない場合
         zoomedImage.src = zoomImage.src;
         zoomOverlay.style.display = 'flex';
-        zoomOverlay.classList.add('zoomed');
-    }, 0);
 
-    zoomOverlay.style.opacity = '0';
-    setTimeout(function () {
-        zoomOverlay.style.opacity = '1';
-    }, 0);
+        zoomOverlay.classList.remove('zoomed');
+        setTimeout(function () {
+            zoomedImage.src = zoomImage.src;
+            zoomOverlay.style.display = 'flex';
+            zoomOverlay.classList.add('zoomed');
+        }, 0);
 
-    zoomOverlay.addEventListener('click', function () {
         zoomOverlay.style.opacity = '0';
         setTimeout(function () {
-            zoomOverlay.style.display = 'none';
             zoomOverlay.style.opacity = '1';
-        }, 300);
-    });
+        }, 0);
+
+        isZoomed = true; // 拡大表示フラグをtrueに設定
+    } else { // 拡大表示されている場合
+        zoomOverlay.style.opacity = '0'; // opacityを0に設定し、トランジションを開始
+        setTimeout(function () {
+            zoomOverlay.classList.remove('zoomed'); // アニメーションが完了した後にzoomedクラスを削除
+            setTimeout(function () {
+                zoomOverlay.style.display = 'none'; // アニメーションが完了した後に要素を非表示にする
+            }, 300); // display:none; を実行する前に、0.3秒待つ
+        }, 300); // 0.3秒後にアニメーションが完了する想定
+
+        isZoomed = false; // 拡大表示フラグをfalseに設定
+    }
 }
